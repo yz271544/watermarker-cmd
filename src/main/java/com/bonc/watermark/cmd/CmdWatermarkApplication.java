@@ -1,16 +1,23 @@
 package com.bonc.watermark.cmd;
 
 import com.bonc.watermark.cmd.handle.HandlerAdapter;
+import com.bonc.watermark.cmd.handle.TaskDispatcher;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import javax.annotation.Resource;
+import java.util.List;
+
 
 @Slf4j
 @SpringBootApplication
 public class CmdWatermarkApplication implements ApplicationRunner {
+
+    @Resource
+    private TaskDispatcher taskDispatcher;
 
     public static void main(String[] args) {
         SpringApplication.run(CmdWatermarkApplication.class, args);
@@ -22,8 +29,10 @@ public class CmdWatermarkApplication implements ApplicationRunner {
             System.out.println(usage());
             System.exit(0);
         }
-        HandlerAdapter factory = HandlerAdapter.factory(args);
-        factory.adapter();
+        /*HandlerAdapter factory = HandlerAdapter.factory(args);
+        factory.adapter();*/
+        List<HandlerAdapter> handlerAdapters = taskDispatcher.expose(args);
+        taskDispatcher.dispatch(handlerAdapters);
     }
 
     private String usage() {

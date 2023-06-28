@@ -41,3 +41,731 @@ Caused by: com.bonc.watermark.cmd.exception.CmdArgumentInvalidException: must sp
 2023-06-28 13:00:25.964  INFO 29940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 29940 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
 2023-06-28 13:00:25.968  INFO 29940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
 2023-06-28 13:00:26.624  INFO 29940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.231 seconds (JVM running for 2.565)
+2023-06-28 17:35:39.153  INFO 5516 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 5516 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:35:39.157  INFO 5516 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:35:39.934  WARN 5516 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:35:39.944  INFO 5516 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:35:39.958 ERROR 5516 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:20)
+	at com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522.<init>(<generated>)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:38:10.274  INFO 12504 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 12504 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:38:10.278  INFO 12504 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:38:10.749  WARN 12504 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:38:10.760  INFO 12504 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:38:10.775 ERROR 12504 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:20)
+	at com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$f748e522.<init>(<generated>)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:39:57.340  INFO 6784 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 6784 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:39:57.344  INFO 6784 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:39:58.066  WARN 6784 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:39:58.077  INFO 6784 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:39:58.092 ERROR 6784 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:20)
+	at com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6.<init>(<generated>)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:41:40.762  INFO 1688 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 1688 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:41:40.767  INFO 1688 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:41:41.255  WARN 1688 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:41:41.268  INFO 1688 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:41:41.285 ERROR 1688 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:20)
+	at com.bonc.watermark.cmd.config.FixTaskPool$$EnhancerBySpringCGLIB$$ddbe75e6.<init>(<generated>)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:43:59.625  INFO 15940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 15940 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:43:59.629  INFO 15940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:44:00.222  WARN 15940 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:44:00.237  INFO 15940 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:44:00.257 ERROR 15940 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:21)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:45:59.584  INFO 10988 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 10988 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:45:59.587  INFO 10988 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:46:00.074  WARN 10988 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:46:00.085  INFO 10988 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:46:00.100 ERROR 10988 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:21)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:46:51.350  INFO 13580 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 13580 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:46:51.354  INFO 13580 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:46:51.865  WARN 13580 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:46:51.877  INFO 13580 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:46:51.892 ERROR 13580 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:21)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:48:29.194  INFO 5980 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 5980 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:48:29.199  INFO 5980 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:48:29.775  WARN 5980 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+2023-06-28 17:48:29.787  INFO 5980 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 17:48:29.802 ERROR 5980 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cmdWatermarkApplication': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'taskDispatcher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fixTaskPool' defined in file [D:\iProject\javapath\watermarker-cmd\target\classes\com\bonc\watermark\cmd\config\FixTaskPool.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1213)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:453)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:527)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:497)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:650)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:239)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:318)
+	... 31 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bonc.watermark.cmd.config.FixTaskPool]: Constructor threw exception; nested exception is java.lang.IllegalArgumentException
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:217)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1310)
+	... 45 common frames omitted
+Caused by: java.lang.IllegalArgumentException: null
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1314)
+	at java.util.concurrent.ThreadPoolExecutor.<init>(ThreadPoolExecutor.java:1202)
+	at java.util.concurrent.Executors.newFixedThreadPool(Executors.java:89)
+	at com.bonc.watermark.cmd.config.FixTaskPool.<init>(FixTaskPool.java:20)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:204)
+	... 47 common frames omitted
+
+2023-06-28 17:49:08.831  INFO 11948 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 11948 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:49:08.836  INFO 11948 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:49:09.402  INFO 11948 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.134 seconds (JVM running for 2.482)
+2023-06-28 17:51:09.702  INFO 28612 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 28612 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 17:51:09.708  INFO 28612 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 17:51:10.313  INFO 28612 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.222 seconds (JVM running for 2.651)
+2023-06-28 17:51:10.317  INFO 28612 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit
+2023-06-28 17:51:10.317  INFO 28612 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : submited
+2023-06-28 18:50:34.140  INFO 13864 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 13864 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 18:50:34.144  INFO 13864 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 18:50:35.148  INFO 13864 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.894 seconds (JVM running for 3.657)
+2023-06-28 18:50:35.152  INFO 13864 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit
+2023-06-28 18:50:47.283  INFO 13864 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 18:50:47.303 ERROR 13864 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: java.lang.ClassCastException: java.util.concurrent.FutureTask cannot be cast to java.lang.Comparable
+	at java.util.concurrent.ConcurrentSkipListMap.cpr(ConcurrentSkipListMap.java:655)
+	at java.util.concurrent.ConcurrentSkipListMap.doRemove(ConcurrentSkipListMap.java:973)
+	at java.util.concurrent.ConcurrentSkipListMap.remove(ConcurrentSkipListMap.java:1992)
+	at java.util.concurrent.ConcurrentSkipListSet.remove(ConcurrentSkipListSet.java:259)
+	at com.bonc.watermark.cmd.config.FixTaskPool.detectTask(FixTaskPool.java:47)
+	at com.bonc.watermark.cmd.handle.TaskDispatcher.dispatch(TaskDispatcher.java:90)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.run(CmdWatermarkApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:786)
+	... 5 common frames omitted
+
+2023-06-28 19:00:31.060  INFO 22476 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 22476 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 19:00:31.064  INFO 22476 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 19:00:31.757  INFO 22476 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.376 seconds (JVM running for 3.019)
+2023-06-28 19:00:31.761  INFO 22476 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit
+2023-06-28 19:03:05.506  INFO 16252 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 16252 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 19:03:05.511  INFO 16252 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 19:03:06.338  INFO 16252 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.503 seconds (JVM running for 3.117)
+2023-06-28 19:03:06.341  INFO 16252 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit
+2023-06-28 19:03:17.537  INFO 16252 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 19:03:17.555 ERROR 16252 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:23)
+Caused by: java.lang.ClassCastException: java.util.concurrent.FutureTask cannot be cast to java.lang.Comparable
+	at java.util.concurrent.ConcurrentSkipListMap.cpr(ConcurrentSkipListMap.java:655)
+	at java.util.concurrent.ConcurrentSkipListMap.doRemove(ConcurrentSkipListMap.java:973)
+	at java.util.concurrent.ConcurrentSkipListMap.remove(ConcurrentSkipListMap.java:1992)
+	at java.util.concurrent.ConcurrentSkipListSet.remove(ConcurrentSkipListSet.java:259)
+	at com.bonc.watermark.cmd.config.FixTaskPool.detectTask(FixTaskPool.java:47)
+	at com.bonc.watermark.cmd.handle.TaskDispatcher.dispatch(TaskDispatcher.java:90)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.run(CmdWatermarkApplication.java:35)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:786)
+	... 5 common frames omitted
+
+2023-06-28 19:14:52.804  INFO 29136 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 29136 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 19:14:52.809  INFO 29136 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 19:14:53.561  INFO 29136 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.527 seconds (JVM running for 3.111)
+2023-06-28 19:14:53.564  INFO 29136 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit
+2023-06-28 19:15:05.068  INFO 29136 --- [main] c.bonc.watermark.cmd.config.FixTaskPool  : task status:success
+2023-06-28 19:15:05.068  INFO 29136 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : submited
+2023-06-28 19:16:44.265  INFO 30476 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 30476 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 19:16:44.269  INFO 30476 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 19:16:44.967  INFO 30476 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.362 seconds (JVM running for 2.952)
+2023-06-28 19:16:44.972  INFO 30476 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit waterMask task
+2023-06-28 19:16:44.972  INFO 30476 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start detect waterMask task
+2023-06-28 19:16:55.995  INFO 30476 --- [main] c.bonc.watermark.cmd.config.FixTaskPool  : task status:success
+2023-06-28 19:16:55.995  INFO 30476 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : finish all of the waterMask task
+2023-06-28 19:19:36.200  INFO 20616 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 20616 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 19:19:36.206  INFO 20616 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 19:19:36.837  INFO 20616 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.334 seconds (JVM running for 2.936)
+2023-06-28 19:19:36.841  INFO 20616 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit waterMask task
+2023-06-28 19:19:36.841  INFO 20616 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start detect waterMask task
+2023-06-28 19:19:36.846  INFO 20616 --- [pool-2-thread-1] c.b.watermark.cmd.handle.HandlerAdapter  : start add water mask for D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx
+2023-06-28 19:19:48.013  INFO 20616 --- [pool-2-thread-1] c.b.watermark.cmd.handle.HandlerAdapter  : finish added the water mask for D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx
+2023-06-28 19:19:48.014  INFO 20616 --- [main] c.bonc.watermark.cmd.config.FixTaskPool  : task status:success
+2023-06-28 19:19:48.014  INFO 20616 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : finish all of the waterMask task
+2023-06-28 19:23:40.714  INFO 11900 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 11900 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 19:23:40.720  INFO 11900 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 19:23:41.366  INFO 11900 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.379 seconds (JVM running for 3.286)
+2023-06-28 19:23:41.370  INFO 11900 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start submit waterMask task
+2023-06-28 19:23:41.371  INFO 11900 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : start detect waterMask task
+2023-06-28 19:23:41.375  INFO 11900 --- [pool-2-thread-2] c.b.watermark.cmd.handle.HandlerAdapter  : start add water mask for D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx
+2023-06-28 19:23:41.375  INFO 11900 --- [pool-2-thread-1] c.b.watermark.cmd.handle.HandlerAdapter  : start add water mask for D:\iProject\javapath\things-watermarker\doc\excel\11.xlsx
+2023-06-28 19:23:54.663  INFO 11900 --- [pool-2-thread-2] c.b.watermark.cmd.handle.HandlerAdapter  : finish added the water mask for D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx
+2023-06-28 19:23:54.686  INFO 11900 --- [pool-2-thread-1] c.b.watermark.cmd.handle.HandlerAdapter  : finish added the water mask for D:\iProject\javapath\things-watermarker\doc\excel\11.xlsx
+2023-06-28 19:23:54.686  INFO 11900 --- [main] c.bonc.watermark.cmd.config.FixTaskPool  : task status:success
+2023-06-28 19:23:54.687  INFO 11900 --- [main] c.bonc.watermark.cmd.config.FixTaskPool  : task status:success
+2023-06-28 19:23:54.687  INFO 11900 --- [main] c.b.watermark.cmd.handle.TaskDispatcher  : finish all of the waterMask task

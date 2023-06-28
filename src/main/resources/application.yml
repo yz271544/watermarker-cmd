@@ -1,1 +1,4 @@
 person.name: Anonymous
+
+pool:
+  size: 3
