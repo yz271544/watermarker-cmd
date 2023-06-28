@@ -1,0 +1,43 @@
+2023-06-28 10:58:46.484  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 26796 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 10:58:46.488  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 10:58:47.294  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.471 seconds (JVM running for 3.096)
+2023-06-28 10:58:47.297  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Application started with command-line arguments: []
+2023-06-28 10:58:47.298  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : NonOptionArgs: []
+2023-06-28 10:58:47.299  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : OptionNames: []
+2023-06-28 10:58:47.299  INFO 26796 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Contains person.name: false
+2023-06-28 10:59:57.321  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 25232 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 10:59:57.324  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 10:59:57.887  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.179 seconds (JVM running for 2.487)
+2023-06-28 10:59:57.890  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Application started with command-line arguments: [testtesttest, --server.port=9090, --person.name=Memorynotfound.com]
+2023-06-28 10:59:57.891  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : NonOptionArgs: [testtesttest]
+2023-06-28 10:59:57.892  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : OptionNames: [server.port, person.name]
+2023-06-28 10:59:57.892  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : arg-server.port=[9090]
+2023-06-28 10:59:57.892  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : arg-person.name=[Memorynotfound.com]
+2023-06-28 10:59:57.892  INFO 25232 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Contains person.name: true
+2023-06-28 12:33:56.576  INFO 4396 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 4396 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 12:33:56.582  INFO 4396 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 12:33:57.207  INFO 4396 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.218 seconds (JVM running for 2.55)
+2023-06-28 12:33:57.216  INFO 4396 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-06-28 12:33:57.230 ERROR 4396 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute ApplicationRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:789)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.main(CmdWatermarkApplication.java:16)
+Caused by: com.bonc.watermark.cmd.exception.CmdArgumentInvalidException: must specify the inputFileFullPath.
+	at com.bonc.watermark.cmd.handle.HandlerAdapter.factory(ResolverAdapter.java:31)
+	at com.bonc.watermark.cmd.CmdWatermarkApplication.run(CmdWatermarkApplication.java:25)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:786)
+	... 5 common frames omitted
+
+2023-06-28 12:34:29.387  INFO 28344 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 28344 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 12:34:29.392  INFO 28344 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 12:34:29.961  INFO 28344 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.181 seconds (JVM running for 2.515)
+2023-06-28 13:00:25.964  INFO 29940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Starting CmdWatermarkApplication on PC-huzhengyang with PID 29940 (D:\iProject\javapath\watermarker-cmd\target\classes started by Dell in D:\iProject\javapath\watermarker-cmd)
+2023-06-28 13:00:25.968  INFO 29940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : No active profile set, falling back to default profiles: default
+2023-06-28 13:00:26.624  INFO 29940 --- [main] c.b.w.cmd.CmdWatermarkApplication        : Started CmdWatermarkApplication in 1.231 seconds (JVM running for 2.565)
