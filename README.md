@@ -3,8 +3,9 @@
 
 ## example
 ```shell
-java -jar .\watermarker-cmd-1.0.jar --watermark=官方水印 --inputFileFullPath=D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx --outputFileFullPath=D:\iProject\javapath\th
+java -jar .\watermarker-cmd-1.0.jar --pool.size=2 --watermark=官方水印 --inputFileFullPath=D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx --outputFileFullPath=D:\iProject\javapath\th
 ings-watermarker\doc\excel\test-water.xlsx
+
 ```
 
 ## architect

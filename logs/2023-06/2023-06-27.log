@@ -1,9 +1,0 @@
-2023-06-27 15:17:56.871  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : Starting XlsxWatermarkApplication on PC-huzhengyang with PID 21556 (D:\iProject\javapath\xlsx-watermarker\target\classes started by Dell in D:\iProject\javapath\xlsx-watermarker)
-2023-06-27 15:17:56.875  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : No active profile set, falling back to default profiles: default
-2023-06-27 15:17:57.427  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : Started XlsxWatermarkApplication in 1.134 seconds (JVM running for 2.485)
-2023-06-27 15:17:57.430  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : Application started with command-line arguments: [testtesttest, --server.port=9090, --person.name=Memorynotfound.com]
-2023-06-27 15:17:57.432  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : NonOptionArgs: [testtesttest]
-2023-06-27 15:17:57.432  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : OptionNames: [server.port, person.name]
-2023-06-27 15:17:57.433  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : arg-server.port=[9090]
-2023-06-27 15:17:57.433  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : arg-person.name=[Memorynotfound.com]
-2023-06-27 15:17:57.433  INFO 21556 --- [main] c.b.w.xlsx.XlsxWatermarkApplication      : Contains person.name: true

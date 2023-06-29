@@ -3,7 +3,6 @@ package com.bonc.watermark.cmd.config;
 import com.bonc.watermark.cmd.handle.HandlerAdapter;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -15,19 +14,16 @@ import java.util.concurrent.*;
 @Slf4j
 public class FixTaskPool {
 
-    private int size;
-
     private ExecutorService executorService;
 
     List<String> taskReturns;
 
     ConcurrentHashMap<String, Future<String>> tasks;
 
-    public FixTaskPool() {
+    public FixTaskPool(FixTaskPoolSize fixTaskPoolSize) {
         this.taskReturns = new ArrayList<>();
         this.tasks = new ConcurrentHashMap<>();
-        this.executorService = Executors.newFixedThreadPool(3);
-
+        this.executorService = Executors.newFixedThreadPool(fixTaskPoolSize.getSize());
     }
 
     public void submit(HandlerAdapter handlerTask) {
