@@ -1,2 +1,4 @@
 pool:
   size: 3
+protect:
+  password: Fi1!$%kaM%

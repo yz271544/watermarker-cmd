@@ -1,12 +1,17 @@
 package com.bonc.watermark.cmd.handle.impl;
 
+import com.bonc.watermark.cmd.config.WorkbookProperties;
 import com.bonc.watermark.cmd.consist.CmdConsists;
 import com.bonc.watermark.cmd.exception.CmdArgumentInvalidException;
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.handle.DarkTypeEnum;
 import com.bonc.watermark.cmd.handle.WaterMakerHandler;
+import com.bonc.watermark.cmd.util.SpringContextHolder;
 import com.bonc.watermark.cmd.util.StringsUtil;
-import com.spire.xls.*;
+import com.spire.xls.ExcelVersion;
+import com.spire.xls.ViewMode;
+import com.spire.xls.Workbook;
+import com.spire.xls.Worksheet;
 import lombok.extern.slf4j.Slf4j;
 
 import java.awt.*;
@@ -64,15 +69,15 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
 
         int numColumn = (int) Math.ceil(maxColumn / CmdConsists.IMAGE_WIDTH);
         int numRow = (int) Math.ceil(maxRow / CmdConsists.IMAGE_LENGTH);
-        //log.info("drawSolidWaterMarker: numColumn:{}, numRow:{}", numColumn, numRow);
         for (int i = 0; i < numRow; i++) {
             for (int j = 0; j < numColumn; j++) {
                 int pinRow = (int) (i * CmdConsists.IMAGE_LENGTH + 1);
                 int pinCol = (int) (j * CmdConsists.IMAGE_WIDTH + 1);
-                //log.info("add water: {} {}", pinRow, pinCol);
                 sheet.getPictures().add(pinRow, pinCol, imgWtrmrk);
             }
         }
+        WorkbookProperties workbookProperties = (WorkbookProperties) SpringContextHolder.getBean("workbookProperties");
+        sheet.protect(workbookProperties.getPassword());
     }
 
 
@@ -98,10 +103,6 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
         loGraphic.setFont(font);
         loGraphic.setColor(textColor);
         loGraphic.rotate(Math.toRadians(-45));
-//        float alpha = 0.2f; // 透明度
-//        loGraphic.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha));
-//        img = loGraphic.getDeviceConfiguration().createCompatibleImage( (int) width, (int) height, Transparency.TRANSLUCENT);
-//        loGraphic = img.createGraphics();
         loGraphic.drawString(text, ((int) width - liStrWidth) / 6, ((int) height - liStrHeight) / 6);
         loGraphic.drawString(text, ((int) width - liStrWidth) / 3, ((int) height - liStrHeight) / 3);
         loGraphic.drawString(text, ((int) width - liStrWidth) / 2, ((int) height - liStrHeight) / 2);
@@ -110,7 +111,6 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
         loGraphic.drawString(text, ((int) width - liStrWidth), ((int) height - liStrHeight));
         loGraphic.drawString(text, ((int) width - liStrWidth) / 0.8f, ((int) height - liStrHeight) / 0.8f);
         loGraphic.drawString(text, ((int) width - liStrWidth) / 0.7f, ((int) height - liStrHeight) / 0.7f);
-//        loGraphic.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER));
         loGraphic.dispose();
         return img;
     }
