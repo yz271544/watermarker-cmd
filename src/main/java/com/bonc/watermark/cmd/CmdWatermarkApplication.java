@@ -38,7 +38,8 @@ public class CmdWatermarkApplication implements ApplicationRunner {
     private String usage() {
         return "--watermark={watermark}" + "\t" + "specify the watermark words of add to file." + "\n" +
                 "--inputFileFullPath={inputFileFullPath}" + "\t" + "specify the full path of input file for want to add watermark." + "\n" +
-                "--outputFileFullPath={outputFileFullPath}" + "\t" + "specify the full path of output file." + "\n";
+                "--outputFileFullPath={outputFileFullPath}" + "\t" + "specify the full path of output file." + "\n" +
+                "--darkType={dark/light/solid}" + "\n";
     }
 
 }

@@ -3,10 +3,23 @@
 
 ## example
 ```shell
-java -jar .\watermarker-cmd-1.0.jar --pool.size=2 --watermark=官方水印 --inputFileFullPath=D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx --outputFileFullPath=D:\iProject\javapath\th
+java -jar .\watermarker-cmd-1.0.jar --pool.size=2 --darkType=solid --watermark=官方水印 --inputFileFullPath=D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx --outputFileFullPath=D:\iProject\javapath\th
 ings-watermarker\doc\excel\test-water.xlsx
 
 ```
+
+## explanation
+- `pool.size` The number of concurrent parsing excel files, each file is only processed by a single thread, this parameter can be used to improve efficiency when there are multiple files.
+- `darkType`
+  - `dark` hidden watermark in the header for xlsx, use normal view.
+  - `light` explicit watermark in the header for xlsx, use layout view.
+  - `solid` solidified inserted picture is in the xlsx file.
+- `watermark` show watermark in the picture.
+- `inputFileFullPath` input file full path for single file.
+- `outputFileFullPath` output file full path for single file.
+- `inputPath` input files path for multiple file.
+- `outputPath` output files path for multiple file.
+
 
 ## architect
 we are register the component of file type and handler to the `com.bonc.watermark.cmd.handle.FileTypeEnum`
