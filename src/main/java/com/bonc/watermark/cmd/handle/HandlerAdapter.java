@@ -24,6 +24,8 @@ public class HandlerAdapter implements Callable<String> {
 
     String outputFileFullPath;
 
+    DarkTypeEnum darkTypeEnum;
+
     @Override
     public String call() {
         try {
@@ -47,7 +49,7 @@ public class HandlerAdapter implements Callable<String> {
 
     public void process(FileTypeEnum fileTypeEnum) throws CmdException {
         log.info("start add water mask for {}", this.inputFileFullPath);
-        fileTypeEnum.get().process(this.getWatermark(), this.getInputFileFullPath(), this.getOutputFileFullPath());
+        fileTypeEnum.get().process(this.getWatermark(), this.getInputFileFullPath(), this.getOutputFileFullPath(), this.getDarkTypeEnum());
         log.info("finish added the water mask for {}", this.inputFileFullPath);
     }
 

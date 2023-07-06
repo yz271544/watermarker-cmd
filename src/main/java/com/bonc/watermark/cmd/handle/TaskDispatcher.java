@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 @Slf4j
 @Component
@@ -46,6 +45,16 @@ public class TaskDispatcher {
             throw new CmdArgumentInvalidException("outputFileFullPath can only be combined with inputFileFullPath, and inputPath can only be combined with outputPath.");
         }
 
+        DarkTypeEnum darkTypeEnum = DarkTypeEnum.DARK;
+        if (args.containsOption(CmdConsists.DARK_TYPE)) {
+            String darkTypeString = args.getOptionValues(CmdConsists.DARK_TYPE).get(0);
+            darkTypeEnum = DarkTypeEnum.fromTypeValueString(darkTypeString);
+        }
+
+        if (darkTypeEnum == null) {
+            throw new CmdArgumentInvalidException("not found the argument for darkType:" + args.getOptionValues(CmdConsists.DARK_TYPE).get(0));
+        }
+
         List<HandlerAdapter> handlerAdapters = new ArrayList<>();
 
         String watermark = args.getOptionValues(CmdConsists.WATERMARK).get(0);
@@ -58,6 +67,7 @@ public class TaskDispatcher {
             handlerAdapter.setWatermark(watermark);
             handlerAdapter.setInputFileFullPath(input);
             handlerAdapter.setOutputFileFullPath(args.getOptionValues(CmdConsists.OUTPUT_FILE_FULL_PATH).get(0));
+            handlerAdapter.setDarkTypeEnum(darkTypeEnum);
             handlerAdapters.add(handlerAdapter);
         } else if (args.containsOption(CmdConsists.INPUT_PATH)) {
             List<String> filesOfInputPath = new ArrayList<>();
@@ -72,6 +82,7 @@ public class TaskDispatcher {
                     handlerAdapter.setWatermark(watermark);
                     handlerAdapter.setInputFileFullPath(inputFileFullPath);
                     handlerAdapter.setOutputFileFullPath(outputFileFullPath);
+                    handlerAdapter.setDarkTypeEnum(darkTypeEnum);
                     handlerAdapters.add(handlerAdapter);
                 }
             }

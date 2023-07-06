@@ -15,4 +15,10 @@ public class CmdConsists {
     public static final String SUCCESS = "success";
 
     public static final String FAILED = "failed";
+
+    public static final String DARK_TYPE = "darkType";
+
+    public static final Double IMAGE_WIDTH = 10d;
+
+    public static final Double IMAGE_LENGTH = 50d;
 }
