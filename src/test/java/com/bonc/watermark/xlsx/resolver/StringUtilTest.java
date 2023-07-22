@@ -14,4 +14,11 @@ public class StringUtilTest {
                 watermarkDuplicate);
     }
 
+    @Test
+    public void testArgs() {
+        String argPair = "-Dsss";
+        String pairKey = argPair.replaceAll("^-D", "");
+        System.out.println(pairKey);
+    }
+
 }

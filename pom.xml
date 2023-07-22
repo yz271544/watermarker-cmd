@@ -23,6 +23,7 @@
         <commons-logging.version>1.2</commons-logging.version>
         <lomok.version>1.18.20</lomok.version>
         <spire.xls.free.version>5.1.0</spire.xls.free.version>
+        <hutool.version>5.8.20</hutool.version>
     </properties>
 
     <dependencies>
@@ -80,11 +81,90 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
         <dependency>
             <groupId>e-iceblue</groupId>
             <artifactId>spire.xls.free</artifactId>
             <version>${spire.xls.free.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacv-platform</artifactId>
+            <version>1.5.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org</groupId>
+            <artifactId>opencv</artifactId>
+            <version>4.7.0</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/opencv-470.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-words</artifactId>
+            <version>14.9.0</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/aspose-words-14.9.0-jdk16.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.1</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/aspectjweaver-1.9.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.14</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/poi-3.14-20160307.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-examples</artifactId>
+            <version>3.14</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/poi-examples-3.14-20160307.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-excelant</artifactId>
+            <version>3.14</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/poi-excelant-3.14-20160307.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.14</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/poi-ooxml-3.14-20160307.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml-schemas</artifactId>
+            <version>3.14</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/poi-ooxml-schemas-3.14-20160307.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.14</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/poi-scratchpad-3.14-20160307.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>2.6.0-r1364789</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/xbean.jar</systemPath>
         </dependency>
     </dependencies>
 

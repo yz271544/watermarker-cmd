@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.Callable;
 
@@ -25,6 +26,8 @@ public class HandlerAdapter implements Callable<String> {
     String outputFileFullPath;
 
     DarkTypeEnum darkTypeEnum;
+
+    Map<String, String> otherArgs;
 
     @Override
     public String call() {
@@ -49,7 +52,8 @@ public class HandlerAdapter implements Callable<String> {
 
     public void process(FileTypeEnum fileTypeEnum) throws CmdException {
         log.info("start add water mask for {}", this.inputFileFullPath);
-        fileTypeEnum.get().process(this.getWatermark(), this.getInputFileFullPath(), this.getOutputFileFullPath(), this.getDarkTypeEnum());
+        fileTypeEnum.get().process(this.getWatermark(), this.getInputFileFullPath(), this.getOutputFileFullPath(),
+                this.getDarkTypeEnum(), this.getOtherArgs());
         log.info("finish added the water mask for {}", this.inputFileFullPath);
     }
 

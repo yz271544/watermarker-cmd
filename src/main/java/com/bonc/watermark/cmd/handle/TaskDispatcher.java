@@ -6,6 +6,7 @@ import com.bonc.watermark.cmd.exception.CmdArgumentInvalidException;
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.exception.FileNotExistsOrCannotReadException;
 import com.bonc.watermark.cmd.util.FileUtil;
+import com.bonc.watermark.cmd.util.StringsUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Component
@@ -22,6 +24,8 @@ public class TaskDispatcher {
     private FixTaskPool fixTaskPool;
 
     public List<HandlerAdapter> expose(ApplicationArguments args) throws CmdException {
+        List<String> nonOptionArgs = args.getNonOptionArgs();
+        Map<String, String> otherArgs = StringsUtil.otherArgs(nonOptionArgs);
         if (!args.containsOption(CmdConsists.WATERMARK)) {
             log.error("must specify the watermark.");
             throw new CmdArgumentInvalidException("must specify the watermark.");
@@ -68,6 +72,7 @@ public class TaskDispatcher {
             handlerAdapter.setInputFileFullPath(input);
             handlerAdapter.setOutputFileFullPath(args.getOptionValues(CmdConsists.OUTPUT_FILE_FULL_PATH).get(0));
             handlerAdapter.setDarkTypeEnum(darkTypeEnum);
+            handlerAdapter.setOtherArgs(otherArgs);
             handlerAdapters.add(handlerAdapter);
         } else if (args.containsOption(CmdConsists.INPUT_PATH)) {
             List<String> filesOfInputPath = new ArrayList<>();
@@ -83,6 +88,7 @@ public class TaskDispatcher {
                     handlerAdapter.setInputFileFullPath(inputFileFullPath);
                     handlerAdapter.setOutputFileFullPath(outputFileFullPath);
                     handlerAdapter.setDarkTypeEnum(darkTypeEnum);
+                    handlerAdapter.setOtherArgs(otherArgs);
                     handlerAdapters.add(handlerAdapter);
                 }
             }

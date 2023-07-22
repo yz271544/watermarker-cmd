@@ -9,7 +9,9 @@ public enum DarkTypeEnum {
 
     LIGHT("light"),
 
-    SOLID("solid");
+    SOLID("solid"),
+
+    EXTRACT("extract");
 
     private final String typeValue;
 

@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.Resource;
+import java.net.URL;
 import java.util.List;
 
 
@@ -16,10 +17,15 @@ import java.util.List;
 @SpringBootApplication
 public class CmdWatermarkApplication implements ApplicationRunner {
 
+    public static final String libPath = "lib/opencv_java452.dll";
+
     @Resource
     private TaskDispatcher taskDispatcher;
 
     public static void main(String[] args) {
+        URL url = ClassLoader.getSystemResource(libPath);
+        System.load(url.getPath());
+
         SpringApplication.run(CmdWatermarkApplication.class, args);
     }
 

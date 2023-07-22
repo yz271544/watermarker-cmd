@@ -16,13 +16,15 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.Map;
 
 import static java.awt.image.BufferedImage.TYPE_INT_ARGB;
 @Slf4j
 public class XlsxWaterMakerHandler implements WaterMakerHandler {
 
     @Override
-    public void process(String watermark, String inputFileFullPath, String outputFileFullPath, DarkTypeEnum darkTypeEnum) throws CmdException {
+    public void process(String watermark, String inputFileFullPath, String outputFileFullPath,
+                        DarkTypeEnum darkTypeEnum, Map<String, String> otherArgs) throws CmdException {
         //加载Excel测试文档
         Workbook wb = new Workbook();
         wb.loadFromFile(inputFileFullPath);

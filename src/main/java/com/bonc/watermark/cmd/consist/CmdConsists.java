@@ -21,4 +21,20 @@ public class CmdConsists {
     public static final Double IMAGE_WIDTH = 10d;
 
     public static final Double IMAGE_LENGTH = 50d;
+
+    public static final String ARGS_SPLIT = "=";
+
+    public static final String OTHER_ARGS_PREFIX = "-D";
+
+    public static final String WATERMARK_FONT_FAMILY = "fontFamily";
+
+    public static final String WATERMARK_FONT_STYLE = "fontStyle";
+
+    public static final String WATERMARK_FONT_SIZE = "fontSize";
+
+    public static final String WATERMARK_FONT_COLOR = "fontColor";
+
+    public static final String WATERMARK_START_X = "startX";
+
+    public static final String WATERMARK_START_Y = "startY";
 }
