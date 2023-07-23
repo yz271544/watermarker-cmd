@@ -5,6 +5,7 @@ import com.bonc.watermark.cmd.util.FileUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -40,6 +41,15 @@ public class FileUtilTest {
         } catch (CmdException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testReadWholeFileToList() throws IOException {
+        String inputFile = "D:\\iProject\\javapath\\watermarker-cmd\\doc\\jpg\\input\\input.txt";
+
+        List<String> contents = FileUtil.readWholeFileToList(inputFile);
+
+        System.out.println(contents);
     }
 
 }

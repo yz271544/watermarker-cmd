@@ -3,7 +3,7 @@ package com.bonc.watermark.cmd.util;
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.exception.FileNotExistsOrCannotReadException;
 
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 public class FileUtil {
@@ -38,6 +38,21 @@ public class FileUtil {
     public static String extractFileNameFromFullPath(String fileFullPath) {
         File file = new File(fileFullPath);
         return file.getName();
+    }
+
+    public static List<String> readWholeFileToList(String fileFullPath) throws IOException {
+        List<String> contents = new ArrayList<>();
+        FileInputStream fin = new FileInputStream(fileFullPath);
+        InputStreamReader reader = new InputStreamReader(fin);
+        BufferedReader buffReader = new BufferedReader(reader);
+        String strTmp = "";
+        while((strTmp = buffReader.readLine())!=null){
+            contents.add(strTmp);
+        }
+        buffReader.close();
+        reader.close();
+        fin.close();
+        return contents;
     }
 
 }
