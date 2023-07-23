@@ -52,4 +52,10 @@ public class FileUtilTest {
         System.out.println(contents);
     }
 
+    @Test
+    public void testTempPath() {
+        String nativeTempDir = System.getProperty("java.io.tmpdir");
+        System.out.println("nativeTempDir:" + nativeTempDir);
+    }
+
 }

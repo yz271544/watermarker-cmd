@@ -3,8 +3,13 @@
 
 ## example
 ```shell
+## add watermark for xlsx
 java -jar .\watermarker-cmd-1.0.jar --pool.size=2 --darkType=solid --watermark=官方水印 --inputFileFullPath=D:\iProject\javapath\things-watermarker\doc\excel\test.xlsx --outputFileFullPath=D:\iProject\javapath\th
 ings-watermarker\doc\excel\test-water.xlsx
+
+## add watermark for jpg in windows cmd ( not powershell )
+java -Dfile.encoding=UTF-8 -jar .\watermarker-cmd-1.2.jar --waterList=D:\iProject\javapath\watermarker-cmd\doc\jpg\input\input.txt  --template=D:\iProject\javapath\watermarker-cmd\doc\jpg\temp.jpg --outputPath=D:\iProject\javapath\watermarker-cmd\doc\jpg\batch --darkType=light -DfontFamily=华文行楷 -DfontStyle=bold -DfontSize=80 -DfontColor=black -DstartX=700 -DstartY=1030
+
 
 ```
 
