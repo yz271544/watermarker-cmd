@@ -4,12 +4,13 @@ import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.handle.DarkTypeEnum;
 import com.bonc.watermark.cmd.handle.WaterMakerHandler;
 
+import java.util.List;
 import java.util.Map;
 
 public class DocWaterMakerHandler implements WaterMakerHandler {
     @Override
     public void process(String watermark, String inputFileFullPath, String outputFileFullPath,
-                        DarkTypeEnum darkTypeEnum, Map<String, String> otherArgs) throws CmdException {
+                        DarkTypeEnum darkTypeEnum, List<Map<String, String>> otherArgs) throws CmdException {
 
     }
 }

@@ -1,0 +1,50 @@
+{
+  "watermarkTasks": [
+    {
+      "name": "张三",
+      "otherArgs": [
+        {
+          "watermark": "张三",
+          "fontFamily": "华文行楷",
+          "fontSize": "80",
+          "startY": "1030",
+          "startX": "700",
+          "fontStyle": "bold",
+          "fontColor": "black"
+        },
+        {
+          "watermark": "SXTYXJYG01001ZS",
+          "fontFamily": "宋体",
+          "fontSize": "60",
+          "startY": "295",
+          "startX": "3400",
+          "fontStyle": "bold",
+          "fontColor": "grey"
+        }
+      ]
+    },
+    {
+      "name": "李四",
+      "otherArgs": [
+        {
+          "watermark": "李四",
+          "fontFamily": "华文行楷",
+          "fontSize": "80",
+          "startY": "1030",
+          "startX": "700",
+          "fontStyle": "bold",
+          "fontColor": "black"
+        },
+        {
+          "watermark": "SXTYXJYG01002LS",
+          "fontFamily": "宋体",
+          "fontSize": "60",
+          "startY": "295",
+          "startX": "3400",
+          "fontStyle": "bold",
+          "fontColor": "grey"
+        }
+      ]
+    }
+  ]
+}

@@ -16,6 +16,8 @@ public class CmdConsists {
 
     public static final String WATER_LIST_PATH = "waterList";
 
+    public static final String MULTI_TASK_CONFIG = "multiTaskConfig";
+
     public static final String SUCCESS = "success";
 
     public static final String FAILED = "failed";

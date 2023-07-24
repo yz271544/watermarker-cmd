@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.Callable;
@@ -27,7 +28,7 @@ public class HandlerAdapter implements Callable<String> {
 
     DarkTypeEnum darkTypeEnum;
 
-    Map<String, String> otherArgs;
+    List<Map<String, String>> otherArgs;
 
     @Override
     public String call() {

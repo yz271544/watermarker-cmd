@@ -28,11 +28,11 @@ public class CmdWatermarkApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         // 1、IDEA load方法
-//        URL url = ClassLoader.getSystemResource(libPath);
-//        System.load(url.getPath());
+        URL url = ClassLoader.getSystemResource(libPath);
+        System.load(url.getPath());
 
         // 2、打包部署时使用下面方法
-         loadLib();
+        // loadLib();
 
         SpringApplication.run(CmdWatermarkApplication.class, args);
     }

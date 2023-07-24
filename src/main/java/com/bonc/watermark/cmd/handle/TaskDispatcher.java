@@ -3,9 +3,11 @@ package com.bonc.watermark.cmd.handle;
 import cn.hutool.core.util.ObjectUtil;
 import com.bonc.watermark.cmd.config.FixTaskPool;
 import com.bonc.watermark.cmd.consist.CmdConsists;
+import com.bonc.watermark.cmd.entity.WatermarkTask;
 import com.bonc.watermark.cmd.exception.CmdArgumentInvalidException;
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.exception.FileNotExistsOrCannotReadException;
+import com.bonc.watermark.cmd.entity.ArgsMap;
 import com.bonc.watermark.cmd.util.FileUtil;
 import com.bonc.watermark.cmd.util.StringsUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -27,8 +29,8 @@ public class TaskDispatcher {
 
     public List<HandlerAdapter> expose(ApplicationArguments args) throws CmdException {
         List<String> nonOptionArgs = args.getNonOptionArgs();
-        Map<String, String> otherArgs = StringsUtil.otherArgs(nonOptionArgs);
-        if (!args.containsOption(CmdConsists.WATERMARK) && !args.containsOption(CmdConsists.WATER_LIST_PATH)) {
+        List<Map<String, String>> otherArgs = StringsUtil.otherArgs(nonOptionArgs);
+        if (!args.containsOption(CmdConsists.WATERMARK) && !args.containsOption(CmdConsists.WATER_LIST_PATH) && !args.containsOption(CmdConsists.MULTI_TASK_CONFIG)) {
             log.error("must specify the watermark.");
             throw new CmdArgumentInvalidException("must specify the watermark.");
         }
@@ -132,6 +134,34 @@ public class TaskDispatcher {
                     handlerAdapter.setOtherArgs(otherArgs);
                     handlerAdapters.add(handlerAdapter);
                 }
+            }
+        } else if (args.containsOption(CmdConsists.MULTI_TASK_CONFIG)) {
+            List<String> optionValues = args.getOptionValues(CmdConsists.MULTI_TASK_CONFIG);
+            if (ObjectUtil.isEmpty(optionValues)) {
+                throw new FileNotExistsOrCannotReadException("multiTaskConfig must special the exists file");
+            }
+
+            // prepare template path
+            List<String> templatePathOptions = args.getOptionValues(CmdConsists.TEMPLATE_PATH);
+            if (ObjectUtil.isEmpty(templatePathOptions)) {
+                throw new CmdArgumentInvalidException("not found template file");
+            }
+            String templatePath = templatePathOptions.get(0);
+
+            String fileDirSep = System.getProperties().getProperty("file.separator");
+            String inputFileName = FileUtil.extractFileNameFromFullPath(templatePath);
+
+            String multiWaterTaskConfig = optionValues.get(0);
+            ArgsMap argsMap = FileUtil.parseFromWatermarkJson(multiWaterTaskConfig);
+            List<WatermarkTask> watermarkTasks = argsMap.getWatermarkTasks();
+            for (WatermarkTask watermarkTask : watermarkTasks) {
+                String outputFileFullPath = args.getOptionValues(CmdConsists.OUTPUT_PATH).get(0) + fileDirSep + watermarkTask.getName() + "." + inputFileName;
+                HandlerAdapter handlerAdapter = new HandlerAdapter();
+                handlerAdapter.setInputFileFullPath(templatePath);
+                handlerAdapter.setOutputFileFullPath(outputFileFullPath);
+                handlerAdapter.setDarkTypeEnum(darkTypeEnum);
+                handlerAdapter.setOtherArgs(watermarkTask.getOtherArgs());
+                handlerAdapters.add(handlerAdapter);
             }
         }
 

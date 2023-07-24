@@ -2,6 +2,10 @@ package com.bonc.watermark.cmd.util;
 
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.exception.FileNotExistsOrCannotReadException;
+import com.bonc.watermark.cmd.exception.TypeConvertException;
+import com.bonc.watermark.cmd.entity.ArgsMap;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.commons.io.FileUtils;
 
 import java.io.*;
 import java.util.*;
@@ -53,6 +57,17 @@ public class FileUtil {
         reader.close();
         fin.close();
         return contents;
+    }
+
+    public static ArgsMap parseFromWatermarkJson(String configFileFullPath) throws CmdException {
+        ObjectMapper mapper = new ObjectMapper();
+        File file = new File(configFileFullPath);
+        try {
+            String data = FileUtils.readFileToString(file, "UTF-8");
+            return mapper.readValue(data, ArgsMap.class);
+        } catch (IOException e) {
+            throw new TypeConvertException("parser file "+ configFileFullPath +" failed :" + e.getMessage());
+        }
     }
 
 }
