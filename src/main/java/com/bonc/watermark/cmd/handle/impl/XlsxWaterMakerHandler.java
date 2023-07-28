@@ -52,9 +52,15 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
             //调用DrawText() 方法插入图片
             BufferedImage imgWtrmrk = null;
             if (ObjectUtil.isNotEmpty(fontAndLocate)) {
-                imgWtrmrk = drawText(watermarkTo, font, fontAndLocate.getFontColor(), Color.white, sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth());
+                imgWtrmrk = drawText(watermarkTo, font, fontAndLocate.getFontColor(), Color.white,
+                        sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth(),
+                        fontAndLocate.getAlpha()
+                );
             } else {
-                imgWtrmrk = drawText(watermarkTo, font, Color.gray, Color.white, sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth());
+                imgWtrmrk = drawText(watermarkTo, font, Color.gray, Color.white,
+                        sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth(),
+                        0.25f
+                );
             }
 
             //将图片设置为页眉
@@ -101,8 +107,10 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
     }
 
 
-    private BufferedImage drawText(String text, Font font, Color textColor, Color backColor, double height, double width) {
-
+    private BufferedImage drawText(String text, Font font, Color textColor, Color backColor, double height, double width, float alpha) {
+        if (ObjectUtil.isEmpty(alpha)) {
+          alpha = 0.25f;
+        }
         //定义图片宽度和高度
         BufferedImage img = new BufferedImage((int) width, (int) height, TYPE_INT_ARGB);
         Graphics2D loGraphic = img.createGraphics();
@@ -123,6 +131,7 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
         loGraphic.setFont(font);
         loGraphic.setColor(textColor);
         loGraphic.rotate(Math.toRadians(-45));
+        loGraphic.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
         loGraphic.drawString(text, ((int) width - liStrWidth) / 6, ((int) height - liStrHeight) / 6);
         loGraphic.drawString(text, ((int) width - liStrWidth) / 3, ((int) height - liStrHeight) / 3);
         loGraphic.drawString(text, ((int) width - liStrWidth) / 2, ((int) height - liStrHeight) / 2);

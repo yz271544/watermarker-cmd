@@ -16,6 +16,7 @@ public class FontAndLocate {
     Color fontColor;
     int locateX;
     int locateY;
+    float alpha;
 
     public FontAndLocate(Map<String, String> otherArgs) {
         fontFamilyName = otherArgs.getOrDefault(CmdConsists.WATERMARK_FONT_FAMILY, FontFamilyEnum.SIMSUN.getFontFamily());
@@ -77,6 +78,13 @@ public class FontAndLocate {
         } else {
             locateY = 15;
         }
+
+        String alphaStr = otherArgs.get(CmdConsists.TRANSPARENT_ALPHA);
+        if (ObjectUtil.isNotEmpty(alphaStr)) {
+            alpha = Float.parseFloat(alphaStr);
+        } else {
+            alpha = 0.25f;
+        }
     }
 
     public String getFontFamilyName() {
@@ -127,4 +135,11 @@ public class FontAndLocate {
         this.locateY = locateY;
     }
 
+    public float getAlpha() {
+        return alpha;
+    }
+
+    public void setAlpha(float alpha) {
+        this.alpha = alpha;
+    }
 }

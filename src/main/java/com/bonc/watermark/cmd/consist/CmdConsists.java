@@ -51,4 +51,6 @@ public class CmdConsists {
     public static final String WATERMARK_START_X = "startX";
 
     public static final String WATERMARK_START_Y = "startY";
+
+    public static final String TRANSPARENT_ALPHA = "transparentAlpha";
 }
