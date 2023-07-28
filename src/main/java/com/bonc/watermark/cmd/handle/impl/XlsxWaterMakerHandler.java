@@ -8,14 +8,12 @@ import com.bonc.watermark.cmd.handle.DarkTypeEnum;
 import com.bonc.watermark.cmd.handle.WaterMakerHandler;
 import com.bonc.watermark.cmd.util.SpringContextHolder;
 import com.bonc.watermark.cmd.util.StringsUtil;
-import com.spire.xls.ExcelVersion;
-import com.spire.xls.ViewMode;
-import com.spire.xls.Workbook;
-import com.spire.xls.Worksheet;
+import com.spire.xls.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.Map;
 
@@ -38,6 +36,9 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
 
         for (int i = 0; i < wb.getWorksheets().getCount(); i++) {
             Worksheet sheet = wb.getWorksheets().get(i);
+            sheet.getAllocatedRange().autoFitRows();
+            sheet.getAllocatedRange().autoFitColumns();
+            sheet.getAutoFilters().setRange(sheet.getRange());
             //调用DrawText() 方法插入图片
             BufferedImage imgWtrmrk = drawText(watermarkTo, font, Color.gray, Color.white, sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth());
 
@@ -74,13 +75,13 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
         int numRow = (int) Math.ceil(maxRow / CmdConsists.IMAGE_LENGTH);
         for (int i = 0; i < numRow; i++) {
             for (int j = 0; j < numColumn; j++) {
-                int pinRow = (int) (i * CmdConsists.IMAGE_LENGTH + 1);
+                int pinRow = (int) (i * CmdConsists.IMAGE_LENGTH + 2); // 添加过滤筛选按钮，露出第一行
                 int pinCol = (int) (j * CmdConsists.IMAGE_WIDTH + 1);
                 sheet.getPictures().add(pinRow, pinCol, imgWtrmrk);
             }
         }
         WorkbookProperties workbookProperties = (WorkbookProperties) SpringContextHolder.getBean("workbookProperties");
-        sheet.protect(workbookProperties.getPassword());
+        sheet.protect(workbookProperties.getPassword(), EnumSet.of(SheetProtectionType.Filtering));
     }
 
 
