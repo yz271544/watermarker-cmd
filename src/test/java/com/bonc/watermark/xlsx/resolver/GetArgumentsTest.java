@@ -11,10 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GetArgumentsTest {
 
@@ -71,6 +68,21 @@ public class GetArgumentsTest {
                 System.out.println(task);
             }
         }
+    }
+
+    @Test
+    public void testArgsContain() {
+        String[] args = {"--watermark", "--skipLoadLib", "--inputFileFullPath"};
+
+        boolean isSkipLoadLib = false;
+        for (int i = 0; i < args.length; i++) {
+            if (args[i].equals("--skipLoadLib")) {
+                isSkipLoadLib = true;
+            }
+        }
+
+        System.out.println(isSkipLoadLib);
+
     }
 
 }

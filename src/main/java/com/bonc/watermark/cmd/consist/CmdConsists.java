@@ -2,6 +2,8 @@ package com.bonc.watermark.cmd.consist;
 
 public class CmdConsists {
 
+    public static final String SKIP_LOAD_LIB = "--skipLoadLib";
+
     public static final String WATERMARK = "watermark";
 
     public static final String INPUT_FILE_FULL_PATH = "inputFileFullPath";

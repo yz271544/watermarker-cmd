@@ -2,6 +2,7 @@ package com.bonc.watermark.cmd;
 
 import com.bonc.watermark.cmd.handle.HandlerAdapter;
 import com.bonc.watermark.cmd.handle.TaskDispatcher;
+import com.bonc.watermark.cmd.util.StringsUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -14,6 +15,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -27,12 +29,17 @@ public class CmdWatermarkApplication implements ApplicationRunner {
     private TaskDispatcher taskDispatcher;
 
     public static void main(String[] args) {
-        // 1、IDEA load方法
-        URL url = ClassLoader.getSystemResource(libPath);
-        System.load(url.getPath());
 
-        // 2、打包部署时使用下面方法
-        // loadLib();
+        if (!StringsUtil.containSkipLoadLib(args)) {
+            try {
+                // 1、IDEA load方法
+                URL url = ClassLoader.getSystemResource(libPath);
+                System.load(url.getPath());
+            } catch (Exception e) {
+                // 2、打包部署时使用下面方法
+                loadLib();
+            }
+        }
 
         SpringApplication.run(CmdWatermarkApplication.class, args);
     }

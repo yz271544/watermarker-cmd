@@ -1,6 +1,7 @@
 package com.bonc.watermark.cmd.util;
 
 import cn.hutool.core.util.ObjectUtil;
+import com.bonc.watermark.cmd.consist.CmdConsists;
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.exception.TypeConvertException;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -43,5 +44,15 @@ public class StringsUtil {
         } else {
             return null;
         }
+    }
+
+    public static boolean containSkipLoadLib(String[] args) {
+        boolean isSkipLoadLib = false;
+        for (int i = 0; i < args.length; i++) {
+            if (args[i].equals(CmdConsists.SKIP_LOAD_LIB)) {
+                isSkipLoadLib = true;
+            }
+        }
+        return isSkipLoadLib;
     }
 }
