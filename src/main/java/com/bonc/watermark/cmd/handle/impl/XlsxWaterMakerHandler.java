@@ -131,6 +131,7 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
         loGraphic.setFont(font);
         loGraphic.setColor(textColor);
         loGraphic.rotate(Math.toRadians(-45));
+        // 设置水印字体的透明度
         loGraphic.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
         loGraphic.drawString(text, ((int) width - liStrWidth) / 6, ((int) height - liStrHeight) / 6);
         loGraphic.drawString(text, ((int) width - liStrWidth) / 3, ((int) height - liStrHeight) / 3);
