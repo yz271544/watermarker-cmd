@@ -42,6 +42,12 @@ public class CmdConsists {
 
     public static final String WATERMARK_FONT_COLOR = "fontColor";
 
+    public static final String WATERMARK_FONT_COLOR_R = "fR";
+
+    public static final String WATERMARK_FONT_COLOR_G = "fG";
+
+    public static final String WATERMARK_FONT_COLOR_B = "fB";
+
     public static final String WATERMARK_START_X = "startX";
 
     public static final String WATERMARK_START_Y = "startY";

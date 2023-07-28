@@ -1,11 +1,13 @@
 package com.bonc.watermark.cmd.handle.impl;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.bonc.watermark.cmd.config.WorkbookProperties;
 import com.bonc.watermark.cmd.consist.CmdConsists;
 import com.bonc.watermark.cmd.exception.CmdArgumentInvalidException;
 import com.bonc.watermark.cmd.exception.CmdException;
 import com.bonc.watermark.cmd.handle.DarkTypeEnum;
 import com.bonc.watermark.cmd.handle.WaterMakerHandler;
+import com.bonc.watermark.cmd.options.FontAndLocate;
 import com.bonc.watermark.cmd.util.SpringContextHolder;
 import com.bonc.watermark.cmd.util.StringsUtil;
 import com.spire.xls.*;
@@ -32,7 +34,15 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
         String watermarkTo = StringsUtil.duplicatesString(watermark, 6, "     ");
 
         //设置文本和字体大小
-        Font font = new Font("宋体", Font.PLAIN, 25);
+        Font font = null;
+        FontAndLocate fontAndLocate = null;
+        if (ObjectUtil.isNotEmpty(otherArgs)) {
+            Map<String, String> firstOtherArgs = otherArgs.get(0);
+            fontAndLocate = new FontAndLocate(firstOtherArgs);
+            font = new Font(fontAndLocate.getFontFamilyName(), fontAndLocate.getFontStyle(), fontAndLocate.getFontSize());
+        } else {
+            font = new Font("宋体", Font.PLAIN, 25);
+        }
 
         for (int i = 0; i < wb.getWorksheets().getCount(); i++) {
             Worksheet sheet = wb.getWorksheets().get(i);
@@ -40,7 +50,12 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
             sheet.getAllocatedRange().autoFitColumns();
             sheet.getAutoFilters().setRange(sheet.getRange());
             //调用DrawText() 方法插入图片
-            BufferedImage imgWtrmrk = drawText(watermarkTo, font, Color.gray, Color.white, sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth());
+            BufferedImage imgWtrmrk = null;
+            if (ObjectUtil.isNotEmpty(fontAndLocate)) {
+                imgWtrmrk = drawText(watermarkTo, font, fontAndLocate.getFontColor(), Color.white, sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth());
+            } else {
+                imgWtrmrk = drawText(watermarkTo, font, Color.gray, Color.white, sheet.getPageSetup().getPageHeight(), sheet.getPageSetup().getPageWidth());
+            }
 
             //将图片设置为页眉
             sheet.getPageSetup().setCenterHeaderImage(imgWtrmrk);
@@ -60,8 +75,9 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
                 default:
                     throw new CmdArgumentInvalidException("not found the argument for darkType");
             }
+            WorkbookProperties workbookProperties = (WorkbookProperties) SpringContextHolder.getBean("workbookProperties");
+            sheet.protect(workbookProperties.getPassword(), EnumSet.of(SheetProtectionType.Filtering));
         }
-
         //保存文档
         wb.saveToFile(outputFileFullPath, ExcelVersion.Version2013);
 
@@ -80,8 +96,8 @@ public class XlsxWaterMakerHandler implements WaterMakerHandler {
                 sheet.getPictures().add(pinRow, pinCol, imgWtrmrk);
             }
         }
-        WorkbookProperties workbookProperties = (WorkbookProperties) SpringContextHolder.getBean("workbookProperties");
-        sheet.protect(workbookProperties.getPassword(), EnumSet.of(SheetProtectionType.Filtering));
+//        WorkbookProperties workbookProperties = (WorkbookProperties) SpringContextHolder.getBean("workbookProperties");
+//        sheet.protect(workbookProperties.getPassword(), EnumSet.of(SheetProtectionType.Filtering));
     }
 
 

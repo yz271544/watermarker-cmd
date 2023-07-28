@@ -45,6 +45,21 @@ public class FontAndLocate {
             } catch (CmdException e) {
                 fontColor = new Color(0, 0, 0, 255);
             }
+        } else if (ObjectUtil.isNotEmpty(otherArgs.get(CmdConsists.WATERMARK_FONT_COLOR_R)) &&
+                ObjectUtil.isNotEmpty(otherArgs.get(CmdConsists.WATERMARK_FONT_COLOR_G)) &&
+                ObjectUtil.isNotEmpty(otherArgs.get(CmdConsists.WATERMARK_FONT_COLOR_B))
+        ) {
+            try {
+                String colorR = otherArgs.get(CmdConsists.WATERMARK_FONT_COLOR_R);
+                String colorG = otherArgs.get(CmdConsists.WATERMARK_FONT_COLOR_G);
+                String colorB = otherArgs.get(CmdConsists.WATERMARK_FONT_COLOR_B);
+                Integer cR = Integer.valueOf(colorR);
+                Integer cG = Integer.valueOf(colorG);
+                Integer cB = Integer.valueOf(colorB);
+                fontColor = new Color(cR, cG, cB, 255);
+            } catch (NumberFormatException e) {
+                fontColor = new Color(0, 0, 0, 255);
+            }
         } else {
             fontColor = new Color(0, 0, 0, 255);
         }
