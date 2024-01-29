@@ -24,6 +24,23 @@
         <lomok.version>1.18.20</lomok.version>
         <spire.xls.free.version>5.1.0</spire.xls.free.version>
         <hutool.version>5.8.20</hutool.version>
+        <system.windowsx64>windows-x86_64</system.windowsx64>
+        <system.linuxx64>linux-x86_64</system.linuxx64>
+        <system.macosx64>macosx-x86_64</system.macosx64>
+        <opencv.version>4.7.0</opencv.version>
+        <javacv.version>1.5.7</javacv.version>
+        <ffmpeg.version>5.0</ffmpeg.version>
+        <openblas.version>0.3.19</openblas.version>
+        <flycapture.version>2.13.3.31</flycapture.version>
+        <flandmark.version>1.07</flandmark.version>
+        <tesseract.version>5.0.1</tesseract.version>
+        <leptonica.version>1.82.0</leptonica.version>
+        <artoolkitplus.version>2.3.1</artoolkitplus.version>
+        <jackson.version>2.11.2</jackson.version>
+        <commons-io.version>2.13.0</commons-io.version>
+        <poi.version>3.14</poi.version>
+        <aspose-words.version>14.9.0</aspose-words.version>
+        <aspectjweaver.version>1.9.1</aspectjweaver.version>
     </properties>
 
     <dependencies>
@@ -91,91 +108,245 @@
             <artifactId>spire.xls.free</artifactId>
             <version>${spire.xls.free.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.bytedeco</groupId>
             <artifactId>javacv-platform</artifactId>
-            <version>1.5.7</version>
+            <version>${javacv.version}</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacv</artifactId>
+            <version>${javacv.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>javacpp-platform</artifactId>
+            <version>${javacv.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>ffmpeg</artifactId>
+            <version>${ffmpeg.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>ffmpeg</artifactId>
+            <version>${ffmpeg.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>ffmpeg</artifactId>
+            <version>${ffmpeg.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>openblas</artifactId>
+            <version>${openblas.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>openblas</artifactId>
+            <version>${openblas.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>openblas</artifactId>
+            <version>${openblas.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>flycapture</artifactId>
+            <version>${flycapture.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>flycapture</artifactId>
+            <version>${flycapture.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>flycapture</artifactId>
+            <version>${flycapture.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>-->
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>flandmark</artifactId>
+            <version>${flandmark.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>flandmark</artifactId>
+            <version>${flandmark.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>flandmark</artifactId>
+            <version>${flandmark.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>tesseract</artifactId>
+            <version>${tesseract.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>tesseract</artifactId>
+            <version>${tesseract.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>tesseract</artifactId>
+            <version>${tesseract.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>leptonica</artifactId>
+            <version>${leptonica.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>leptonica</artifactId>
+            <version>${leptonica.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>leptonica</artifactId>
+            <version>${leptonica.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>artoolkitplus</artifactId>
+            <version>${artoolkitplus.version}-${javacv.version}</version>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>artoolkitplus</artifactId>
+            <version>${artoolkitplus.version}-${javacv.version}</version>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco</groupId>
+            <artifactId>artoolkitplus</artifactId>
+            <version>${artoolkitplus.version}-${javacv.version}</version>
+            <classifier>${system.macosx64}</classifier>
+        </dependency>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
-            <version>2.11.2</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.11.2</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.11.2</version>
+            <version>${jackson.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.13.0</version>
+            <version>${commons-io.version}</version>
         </dependency>
         <dependency>
             <groupId>org</groupId>
             <artifactId>opencv</artifactId>
-            <version>4.7.0</version>
+            <version>${opencv.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/opencv-470.jar</systemPath>
+            <classifier>${system.windowsx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org</groupId>
+            <artifactId>opencv</artifactId>
+            <version>${opencv.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/opencv-470.jar</systemPath>
+            <classifier>${system.linuxx64}</classifier>
+        </dependency>
+        <dependency>
+            <groupId>org</groupId>
+            <artifactId>opencv</artifactId>
+            <version>${opencv.version}</version>
+            <scope>system</scope>
+            <systemPath>${pom.basedir}/src/main/resources/lib/opencv-470.jar</systemPath>
+            <classifier>${system.macosx64}</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
             <artifactId>aspose-words</artifactId>
-            <version>14.9.0</version>
+            <version>${aspose-words.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/aspose-words-14.9.0-jdk16.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.1</version>
+            <version>${aspectjweaver.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/aspectjweaver-1.9.1.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/poi-3.14-20160307.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-examples</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/poi-examples-3.14-20160307.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-excelant</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/poi-excelant-3.14-20160307.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/poi-ooxml-3.14-20160307.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml-schemas</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/poi-ooxml-schemas-3.14-20160307.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-scratchpad</artifactId>
-            <version>3.14</version>
+            <version>${poi.version}</version>
             <scope>system</scope>
             <systemPath>${pom.basedir}/src/main/resources/lib/poi-scratchpad-3.14-20160307.jar</systemPath>
         </dependency>
@@ -188,7 +359,7 @@
         </dependency>
     </dependencies>
 
-    <repositories>
+    <!--<repositories>
         <repository>
             <id>AsposeJavaAPI</id>
             <name>Aspose Java API</name>
@@ -199,7 +370,86 @@
             <name>e-iceblue</name>
             <url>https://repo.e-iceblue.com/nexus/content/groups/public/</url>
         </repository>
+    </repositories>-->
+
+
+    <distributionManagement>
+        <repository>
+            <id>boncsx-release</id>
+            <name>boncsx nexus-releases</name>
+            <url>https://nexus.niuquery.com:8443/repository/release-local/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <snapshotRepository>
+            <id>boncsx-snapshot</id>
+            <name>boncsx nexus-snapshot</name>
+            <url>https://nexus.niuquery.com:8443/repository/snapshot-local/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>boncsx</id>
+            <name>bonc sx offic</name>
+            <url>https://nexus.niuquery.com:8443/repository/maven-public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>public</id>
+            <name>huawei nexus</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
     </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>boncsx</id>
+            <name>bonc sx offic</name>
+            <url>https://nexus.niuquery.com:8443/repository/maven-public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>public</id>
+            <name>huawei nexus</name>
+            <url>https://mirrors.huaweicloud.com/repository/maven/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <plugins>
